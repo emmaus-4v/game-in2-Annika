@@ -28,8 +28,8 @@ var spelerY = 100; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
+var vijandX = 1000;   // x-positie van vijand
+var vijandY = 400;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
@@ -46,7 +46,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("purple");
+  fill(164, 218, 239);
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
@@ -57,7 +57,8 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-    
+   fill(205, 77, 77) 
+   ellipse (x, y, 70, 70)
 
 };
 
@@ -79,8 +80,12 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenSpeler = function(x, y) {
-  fill("white");
-  ellipse(x, y, 50, 50);
+    var eyeSize = 13;
+  fill(255, 225, 199);
+  ellipse(x, y - 5, 50, 50)
+  fill(189, 138, 230);
+  ellipse(x - 10, y - 4, eyeSize, eyeSize);
+  ellipse(x + 10, y - 4, eyeSize, eyeSize);
 };
 
 
