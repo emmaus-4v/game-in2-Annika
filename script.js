@@ -28,8 +28,8 @@ var spelerY = 100; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 1000;   // x-positie van vijand
-var vijandY = 400;   // y-positie van vijand
+var vijandX = 800;   // x-positie van vijand
+var vijandY = 500;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
@@ -94,10 +94,15 @@ var tekenSpeler = function(x, y) {
 /**
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
+var speed = 5;
 var beweegVijand = function draw() {
-    if (vijandX > 0 && vijandX < 1050 ) {
-        vijandX++;
-    } else {vijandX = vijandX - 1}
+    vijandX = vijandX + speed;
+
+    if (vijandX > 1220) {
+        speed = -5
+    } if (vijandX < 70) {
+        speed = 5;
+    }
 };
 
 
@@ -113,8 +118,8 @@ var beweegKogel = function() {
  * Kijkt wat de toetsen/muis etc zijn.
  * Updatet globale variabele spelerX en spelerY
  */
-var beweegSpeler = function() {
-
+var beweegSpeler = function draw() {
+    
 };
 
 
