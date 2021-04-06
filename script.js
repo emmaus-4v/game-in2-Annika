@@ -60,8 +60,8 @@ var tekenVijand = function(x, y) {
    fill(205, 77, 77); 
    ellipse (x, y, 70, 70);
    fill("black");
-   ellipse (x - 10, y + 4, 20, 20);
-   ellipse (x + 10, y + 4, 20, 20);
+   ellipse (x - 15, y + 4, 20, 20);
+   ellipse (x + 15, y + 4, 20, 20);
 };
 
 
@@ -94,8 +94,10 @@ var tekenSpeler = function(x, y) {
 /**
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
-var beweegVijand = function() {
-    
+var beweegVijand = function draw() {
+    if (vijandX > 0 && vijandX < 1050 ) {
+        vijandX++;
+    } else {vijandX = vijandX - 1}
 };
 
 
