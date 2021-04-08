@@ -64,8 +64,8 @@ var tekenVijand = function(x, y) {
    ellipse (x - 15, y + 4, 20, 20);
    ellipse (x + 15, y + 4, 20, 20);
    strokeWeight (4);
-   line (x + 23, y - 2, x + 3, y + 8);
-   line (x - 3, y + 8, x - 23, y - 2);
+   line (x + 23, y - 8, x + 3, y);
+   line (x - 3, y, x - 23, y - 8);
 };
 
 
