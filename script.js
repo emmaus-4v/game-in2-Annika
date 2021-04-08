@@ -57,11 +57,15 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-   fill(205, 77, 77); 
+   strokeWeight (1);
+    fill(205, 77, 77); 
    ellipse (x, y, 70, 70);
-   fill("black");
+   fill("brown");
    ellipse (x - 15, y + 4, 20, 20);
    ellipse (x + 15, y + 4, 20, 20);
+   strokeWeight (4);
+   line (x + 23, y - 2, x + 3, y + 8);
+   line (x - 3, y + 8, x - 23, y - 2);
 };
 
 
@@ -83,6 +87,7 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
     var eyeSize = 13;
+  strokeWeight (1)
   fill(255, 225, 199);
   ellipse(x, y - 5, 50, 50);
   fill(189, 138, 230);
