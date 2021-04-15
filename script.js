@@ -123,8 +123,23 @@ var beweegKogel = function() {
  * Kijkt wat de toetsen/muis etc zijn.
  * Updatet globale variabele spelerX en spelerY
  */
+var KeyA = 65;
+var KeyD = 68;
+var KeyW = 87;
+var KeyS = 83;
+
 var beweegSpeler = function draw() {
-    
+     if (keyIsDown(KeyA)) {
+    spelerX = spelerX - 3;
+  }
+  if (keyIsDown(KeyD)) {
+    spelerX = spelerX + 3;
+  } if (keyIsDown(KeyW)) {
+    spelerY = spelerY - 2;
+  }
+  if (keyIsDown(KeyS)) {
+    spelerY = spelerY + 2;
+  }
 };
 
 
