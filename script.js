@@ -48,6 +48,12 @@ var score = 0; // aantal behaalde punten
 var tekenVeld = function () {
   fill(164, 218, 239);
   rect(20, 20, width - 2 * 20, height - 2 * 20);
+  fill("green")
+  rect(20, 535, width - 2 * 20, height - 20 * 20)
+  fill("gray")
+  rect(150, 120, 100, 20)
+  rect(400, 400, 100, 20)
+  rect (800, 300, 100, 20)
 };
 
 
@@ -73,7 +79,7 @@ var tekenVijand = function(x, y) {
  * Tekent de kogel of de bal
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
- */
+ **/
 var tekenKogel = function(x, y) {
 
 
@@ -130,15 +136,15 @@ var KeyS = 83;
 
 var beweegSpeler = function draw() {
      if (keyIsDown(KeyA)) {
-    spelerX = spelerX - 3;
+    spelerX = spelerX - 6;
   }
   if (keyIsDown(KeyD)) {
-    spelerX = spelerX + 3;
+    spelerX = spelerX + 6;
   } if (keyIsDown(KeyW)) {
-    spelerY = spelerY - 2;
+    spelerY = spelerY - 5;
   }
   if (keyIsDown(KeyS)) {
-    spelerY = spelerY + 2;
+    spelerY = spelerY + 5;
   }
 };
 
@@ -159,7 +165,6 @@ var checkVijandGeraakt = function() {
  * @returns {boolean} true als speler is geraakt
  */
 var checkSpelerGeraakt = function() {
-    
   return false;
 };
 
@@ -169,7 +174,6 @@ var checkSpelerGeraakt = function() {
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {
-    
   return false;
 };
 
