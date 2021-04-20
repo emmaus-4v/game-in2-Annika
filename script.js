@@ -148,6 +148,16 @@ var beweegSpeler = function draw() {
   }
 };
 
+/*function physics(true) {
+    var speedY = 0;
+    var gravity = 0.1;
+    var gravitySpeed = 0;
+    var appliedGravity = function() {
+        gravitySpeed += gravity;
+        spelerY += speedY;
+    }
+} */
+
 
 /**
  * Zoekt uit of de vijand is geraakt
