@@ -146,9 +146,16 @@ var beweegSpeler = function draw() {
   if (keyIsDown(KeyS)) {
     spelerY = spelerY + 5;
   }
+
+   var gravitySpeed = 0;
+   if (spelerY < 515) {
+       var gravity = 0.5;
+        gravitySpeed = gravitySpeed + gravity;
+        spelerY = spelerY + gravitySpeed;
+    }
 };
 
-/*function physics(true) {
+/*var physics = function draw{
     var speedY = 0;
     var gravity = 0.1;
     var gravitySpeed = 0;
