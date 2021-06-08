@@ -132,7 +132,6 @@ var beweegKogel = function() {
 var KeyA = 65;
 var KeyD = 68;
 var KeyW = 87;
-var KeyS = 83;
 
 var beweegSpeler = function draw() {
      if (keyIsDown(KeyA)) {
@@ -143,13 +142,10 @@ var beweegSpeler = function draw() {
   } if (keyIsDown(KeyW)) {
     spelerY = spelerY - 5;
   }
-  if (keyIsDown(KeyS)) {
-    spelerY = spelerY + 5;
-  }
 
    var gravitySpeed = 0;
    if (spelerY < 515) {
-       var gravity = 0.5;
+       var gravity = 1;
         gravitySpeed = gravitySpeed + gravity;
         spelerY = spelerY + gravitySpeed;
     }
