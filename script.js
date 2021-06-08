@@ -143,10 +143,9 @@ var beweegSpeler = function draw() {
     spelerY = spelerY - 5;
   }
 
-   var gravitySpeed = 0;
    if (spelerY < 515) {
-       var gravity = 1;
-        gravitySpeed = gravitySpeed + gravity;
+       var gravitySpeed = 1;
+        gravitySpeed = gravitySpeed * 1.5;
         spelerY = spelerY + gravitySpeed;
     }
 };
