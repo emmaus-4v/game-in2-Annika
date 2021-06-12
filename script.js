@@ -110,9 +110,9 @@ var beweegVijand = function draw() {
     vijandX = vijandX + speed;
 
     if (vijandX > 1220) {
-        speed = -5
+        speed = -6;
     } if (vijandX < 70) {
-        speed = 5;
+        speed = 6;
     }
 };
 
@@ -143,22 +143,16 @@ var beweegSpeler = function draw() {
     spelerY = spelerY - 5;
   }
 
-   if (spelerY < 515) {
-       var gravitySpeed = 1;
-        gravitySpeed += gravitySpeed * 1.81;
+   if (spelerY < 515)  {
+       var gravitySpeed = 1.81;
         spelerY = spelerY + gravitySpeed;
+    }
+    if (spelerY == 120 && spelerX < 250 && spelerX > 150)  {
+       gravitySpeed = 0;
     }
 };
 
-/*var physics = function draw{
-    var speedY = 0;
-    var gravity = 0.1;
-    var gravitySpeed = 0;
-    var appliedGravity = function() {
-        gravitySpeed += gravity;
-        spelerY += speedY;
-    }
-} */
+
 
 
 /**
