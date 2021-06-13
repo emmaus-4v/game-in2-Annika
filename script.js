@@ -214,6 +214,10 @@ function draw() {
         // punten erbij
         // nieuwe vijand maken
       }
+
+     /* if (spelerY - vijandY < 20 && spelerX - vijandX < 20) {
+            spelStatus = GAMEOVER;
+      } */
       
       if (checkSpelerGeraakt()) {
         // leven eraf of gezondheid verlagen
